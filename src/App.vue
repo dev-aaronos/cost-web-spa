@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue';
+import DefaultLayout from './layouts/DefaultLayout.vue';
 </script>
 
 <template>
-  <HelloWorld msg="Vite + Vue" />
+  <DefaultLayout>
+    <HelloWorld msg="Vite + Vue" />
+  </DefaultLayout>
 </template>

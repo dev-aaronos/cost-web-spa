@@ -10,7 +10,7 @@ const count = ref(0);
 </script>
 
 <template>
-  <div class="flex justify-center align-middle h-screen p-6">
+  <div class="flex justify-center align-middle">
     <Card>
       <CardHeader class="flex flex-wrap justify-center align-middle">
         <LogoContainer class="w-full" />
@@ -20,6 +20,8 @@ const count = ref(0);
         <div class="w-full flex justify-center">
           <Button @click="count++">count is {{ count }}</Button>
         </div>
+      </CardContent>
+      <CardContent class="flex flex-wrap justify-center align-middle">
         <p class="w-full flex justify-center">
           Edit
           <code>components/HelloWorld.vue</code> to test HMR
