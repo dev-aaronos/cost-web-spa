@@ -8,13 +8,13 @@
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
     <a href="https://vuejs.org/" target="_blank">
-      <img src="../assets/vue.svg" class="logo" alt="Vue logo" />
+      <img src="@/assets/vue.svg" class="logo" alt="Vue logo" />
     </a>
   </div>
 </template>
 
 <style scoped>
-@reference "../style.css";
+@reference "@/style.css";
 
 .logo {
   @apply h-24 p-6 hover:drop-shadow-blue-600;
