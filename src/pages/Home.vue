@@ -4,7 +4,6 @@ import MenuGrid from '@/components/shared/MenuGrid.vue';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 const welcomeMessage: string = 'Hola amigo';
-
 </script>
 
 <template>

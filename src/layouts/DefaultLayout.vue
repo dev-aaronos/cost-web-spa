@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
 
-interface DefaultLayoutProps { header?: string }
+interface DefaultLayoutProps {
+  header?: string;
+}
 
-const { header = 'dev-aaronos' } = defineProps<DefaultLayoutProps>()
-
-
+const { header = 'dev-aaronos' } = defineProps<DefaultLayoutProps>();
 </script>
 
 <template>

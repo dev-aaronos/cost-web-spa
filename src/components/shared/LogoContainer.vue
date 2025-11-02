@@ -1,6 +1,4 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="flex flex-wrap gap-1.5 justify-center align-middle">
