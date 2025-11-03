@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { Input } from '@/components/ui/input';
-import { Select } from '@/components/ui/select';
-import { reactive, toRefs, watch } from 'vue';
+import { reactive, watch } from 'vue';
 
 interface Filter {
   search: string;

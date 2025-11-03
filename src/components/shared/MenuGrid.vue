@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { Card, CardContent } from '../ui/card';
 
 interface IExample {
   id: number;
@@ -57,22 +56,15 @@ const examples = ref<IExample[]>([
 
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    <Card
-      v-for="item in examples"
-      :key="item.id"
-      class="bg-emerald-700 text-neutral-50 shadow-2xl hover:shadow-emerald-500/50 hover:translate-y-0.5"
-    >
-      <CardContent>
+    <div v-for="item in examples" :key="item.id"
+      class="bg-emerald-700 text-neutral-50 shadow-2xl hover:shadow-emerald-500/50 hover:translate-y-0.5 rounded-md">
+      <div class="py-2.5 px-2">
         <h6 class="font-bold">{{ item.name }}</h6>
         <p>{{ item.description }}</p>
-        <RouterLink
-          :to="item.path"
-          class="flex justify-end hover:underline font-bold"
-          title="Ir al inicio"
-        >
+        <RouterLink :to="item.path" class="flex justify-end hover:underline font-bold" title="Ir al inicio">
           Vamos...
         </RouterLink>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   </div>
 </template>

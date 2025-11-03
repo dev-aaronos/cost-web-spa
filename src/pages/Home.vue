@@ -7,15 +7,15 @@ const welcomeMessage: string = 'Hola amigo';
 </script>
 
 <template>
-  <Card>
-    <CardHeader>
+  <div>
+    <div>
       <LogoContainer />
-    </CardHeader>
-    <CardContent>
+    </div>
+    <div>
       <h1 class="flex justify-center align-center font-bold mb-2">
         {{ welcomeMessage }}
       </h1>
       <MenuGrid />
-    </CardContent>
-  </Card>
+    </div>
+  </div>
 </template>
