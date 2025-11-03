@@ -9,7 +9,7 @@ const routes = [
   {
     path: '/ejercicio-1',
     name: 'Example1',
-    component: () => import('@/pages/Example1.vue'),
+    component: () => import('@/pages/user-crud/index.vue'),
   },
   {
     path: '/:pathMatch(.*)*',
