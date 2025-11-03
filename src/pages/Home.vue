@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import LogoContainer from '@/components/shared/LogoContainer.vue';
 import MenuGrid from '@/components/shared/MenuGrid.vue';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 const welcomeMessage: string = 'Hola amigo';
 </script>
