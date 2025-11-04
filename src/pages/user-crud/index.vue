@@ -41,17 +41,24 @@ function openEditForm(userId: number) {
       <!-- Área de filtros -->
       <FilterArea :filter="filter" @change="handleFilter" />
 
-      <!-- Botón crear -->
-      <button class="px-4 py-2 my-2 bg-blue-600 text-white rounded" @click="openCreateForm">
-        Nuevo usuario
-      </button>
+      <UserForm :isEditing="false" :user="null" />
 
       <!-- Tabla -->
-      <UserTable :users="filteredUsers" @edit="openEditForm" @delete="handleDelete" />
+      <UserTable
+        :users="filteredUsers"
+        @edit="openEditForm"
+        @delete="handleDelete"
+      />
 
       <!-- Formulario modal -->
-      <UserForm v-if="showForm" :user="selectedUser" :isEditing="isEditing" @save="handleSave" @cancel="handleCancel"
-        @close="showForm = false" />
+      <UserForm
+        v-if="showForm"
+        :user="selectedUser"
+        :isEditing="isEditing"
+        @save="handleSave"
+        @cancel="handleCancel"
+        @close="showForm = false"
+      />
     </div>
   </div>
 </template>

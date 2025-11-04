@@ -56,14 +56,23 @@ const examples = ref<IExample[]>([
 
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    <div v-for="item in examples" :key="item.id"
-      class="bg-emerald-700 text-neutral-50 shadow-2xl hover:shadow-emerald-500/50 hover:translate-y-0.5 rounded-md">
-      <div class="py-2.5 px-2">
-        <h6 class="font-bold">{{ item.name }}</h6>
-        <p>{{ item.description }}</p>
-        <RouterLink :to="item.path" class="flex justify-end hover:underline font-bold" title="Ir al inicio">
-          Vamos...
-        </RouterLink>
+    <div
+      v-for="item in examples"
+      :key="item.id"
+      class="bg-emerald-700 text-neutral-50 shadow-2xl hover:shadow-emerald-500/50 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 rounded-md"
+    >
+      <div class="card">
+        <div class="card-body">
+          <h6 class="font-bold">{{ item.name }}</h6>
+          <p>{{ item.description }}</p>
+          <RouterLink
+            :to="item.path"
+            class="flex justify-end font-bold link"
+            title="Ir al inicio"
+          >
+            Vamos...
+          </RouterLink>
+        </div>
       </div>
     </div>
   </div>

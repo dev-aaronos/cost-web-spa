@@ -15,6 +15,6 @@
 @reference "@/style.css";
 
 .logo {
-  @apply h-24 p-6 hover:drop-shadow-blue-600;
+  @apply h-24 p-2 transition animate-pulse;
 }
 </style>

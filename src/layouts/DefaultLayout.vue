@@ -9,8 +9,8 @@ const { header = 'dev-aaronos' } = defineProps<DefaultLayoutProps>();
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col bg-gray-50 text-gray-900">
-    <header class="p-4 bg-gray-800 text-white text-xl font-semibold">
+  <div class="min-h-screen flex flex-col">
+    <header class="navbar bg-base-200 shadow-sm text-xl font-semibold link">
       <RouterLink to="/" class="hover:underline" title="Ir al inicio">
         {{ header }}
       </RouterLink>
@@ -22,7 +22,7 @@ const { header = 'dev-aaronos' } = defineProps<DefaultLayoutProps>();
       </div>
     </main>
 
-    <footer class="p-4 text-center text-sm text-gray-500 border-t">
+    <footer class="p-4 bg-base-200 shadow-sm text-center text-sm">
       © {{ new Date().getFullYear() }} dev-aaronos
     </footer>
   </div>

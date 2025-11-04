@@ -6,27 +6,41 @@ const emit = defineEmits<{ edit: [number]; delete: [number] }>();
 </script>
 
 <template>
-  <table class="w-full border-collapse border my-2">
+  <table class="table border">
     <thead>
-      <tr class="bg-gray-100">
-        <th class="border p-2">ID</th>
-        <th class="border p-2">Nombre</th>
-        <th class="border p-2">Rol</th>
-        <th class="border p-2">Activo</th>
-        <th class="border p-2">Acciones</th>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Rol</th>
+        <th>Activo</th>
+        <th>Acciones</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody v-if="users.length === 0">
+      <tr>
+        <td colspan="3">No se han encontrado datos</td>
+      </tr>
+    </tbody>
+    <tbody v-else>
       <tr v-for="u in users" :key="u.id">
-        <td class="border p-2">{{ u.id }}</td>
-        <td class="border p-2">{{ u.name }}</td>
-        <td class="border p-2">{{ u.role }}</td>
-        <td class="border p-2">
-          <input type="checkbox" disabled :checked="u.active" />
+        <td>{{ u.id }}</td>
+        <td>{{ u.name }}</td>
+        <td>{{ u.role }}</td>
+        <td>
+          <input
+            class="checkbox"
+            type="checkbox"
+            disabled
+            :checked="u.active"
+          />
         </td>
-        <td class="border p-2 space-x-2">
-          <button class="text-blue-600" @click="emit('edit', u.id)">Editar</button>
-          <button class="text-red-600" @click="emit('delete', u.id)">Eliminar</button>
+        <td class="flex flex-wrap gap-1.5">
+          <button class="btn btn-primary" @click="emit('edit', u.id)">
+            Editar
+          </button>
+          <button class="btn btn-error" @click="emit('delete', u.id)">
+            Eliminar
+          </button>
         </td>
       </tr>
     </tbody>
